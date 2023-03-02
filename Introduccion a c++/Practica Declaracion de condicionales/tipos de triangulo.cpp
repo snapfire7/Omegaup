@@ -39,9 +39,23 @@ using namespace std;
 //===========================================
 int main(){
     fast
-    int tamales, miembros;
-    cin >> tamales >> miembros;
-    int jefe = ceil((float)tamales/2);
-    jefe += (tamales-jefe)%(miembros-1);
-    cout << jefe;
-}
+    sei lados;
+    int a;
+    for(int i=0; 3>i;i++){
+    cin >> a;
+    lados.IN(a);
+    }
+    switch(lados.size()){
+    case 1:
+        cout << "equilatero";
+        break;
+    
+    case 2:
+        cout << "isosceles";
+        break;
+
+    case 3:
+        cout << "escaleno";
+        break;
+    }
+}  

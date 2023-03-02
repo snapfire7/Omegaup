@@ -39,9 +39,17 @@ using namespace std;
 //===========================================
 int main(){
     fast
-    int tamales, miembros;
-    cin >> tamales >> miembros;
-    int jefe = ceil((float)tamales/2);
-    jefe += (tamales-jefe)%(miembros-1);
-    cout << jefe;
+    vector <pair<double,double>> lados(4);
+    double minimo=999999999999,aux;
+    for(int i=0; 4>i; i++)
+    cin >> lados[i].F >> lados[i].S;
+
+    for(int i=0; 3>i; i++){
+    aux=sqrt(pow(lados[i].F-lados[i+1].F,2)+pow(lados[i].S-lados[i+1].S,2));
+    minimo=min(minimo,aux);
+    }
+    aux=sqrt(pow(lados[0].F-lados[3].F,2)+pow(lados[0].S-lados[3].S,2));
+    minimo=min(minimo,aux);
+
+    cout << minimo;
 }

@@ -39,9 +39,10 @@ using namespace std;
 //===========================================
 int main(){
     fast
-    int tamales, miembros;
-    cin >> tamales >> miembros;
-    int jefe = ceil((float)tamales/2);
-    jefe += (tamales-jefe)%(miembros-1);
-    cout << jefe;
+    int x;
+    cin >> x;
+    if(x&1)
+    cout << "impar";
+    else
+    cout << "par";
 }
